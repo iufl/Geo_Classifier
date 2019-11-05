@@ -4,7 +4,7 @@
 ## Install the project
 
 To use this notebooks you will need to setup the notebook environment using a terminal and run:
-`$ conda env create -f solarobs.yml`
+```$ conda env create -f solarobs.yml```
 
 then in you notebook you must start the kernel within this environment, it's located at top right, by default you should Have Python [env:default], when the correct environment is selected you should have Python [env:solarobs]
 
@@ -33,9 +33,9 @@ through a machine learning algorithm.
 In order to determine the best label for each metadata record, we used **fastText** classifier trained on
 the labeled file
 
-Main file that should be run:
+- Main file that should be run:
  	Keyword_Clustering.ipynb
-External libraries:
+- External libraries:
 	It requires *fastText* installation and the path to it in the __imports__ file
 
 
@@ -51,7 +51,7 @@ to compute similarities. Then, it identifies k centroids and allocates each data
 The algorithm starts with a first group of random centroids, then it performs repetitive calculations to optimize their positions. It stops whether the pre-set number of iterations has been reached or if there is no change in the positions of the centers.
 In case of natural language, processing , word2vec embeddings are used in order to determine the position of each word in the multidimensional space. 
 
-Main file that should be run:
+- Main file that should be run:
 	K-Means Classification.ipynb
 
 
@@ -62,7 +62,7 @@ One of the most common techniques for automatically obtaining topics is Latent s
 As input, it received a corpus of documents and returns a number of different topics from it, together with the most prominent words of each. 
 It uses bag of word(BoW) model, which results in a term-document matrix(occurrence of terms in a document). It builds a term frequency-inverse document frequency (tf-idf) where each position in the vector corresponds to a different word and a document is represented by the number of times each word appears. So, the most important words will be the ones that appear the most often in the documents. The LSA algorithms improve the process by also considering synonymy between words. It learns latent topics by performing a matrix decomposition on the document-term matrix using Singular value decomposition (SVD). This is a matrix factorization method that represents a matrix in the product of two matrices.
 	
-Main file that should be run:
+- Main file that should be run:
 	LDA_clustering.ipynb
 
 
@@ -76,9 +76,9 @@ The approach in this case is the following:
 	- add the similarities between each text and its topic to the matrix
 	- for each topic, arrange the results in descending order, based on the similarity
 
-Main file that should be run:
+- Main file that should be run:
 	Supervised Classifier-Thematic Words.ipynb
 
-#Documentation
+# Documentation
 
 More information can be found in the documentation from the *doc* folder
