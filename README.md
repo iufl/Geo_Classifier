@@ -4,18 +4,38 @@
 ## Install the project
 
 To use this notebooks you will need to setup the notebook environment using a terminal and run:
-```$ conda env create -f solarobs.yml```
+```$ conda env create -f geoss_env.yml```
 
-then in you notebook you must start the kernel within this environment, it's located at top right, by default you should Have Python [env:default], when the correct environment is selected you should have Python [env:solarobs]
+If the creation of the virtual environment fails, all the libraries that
+need to be installed can be found in the __import__ file in the project.
+
+Apart from the Jupyter Notebook sources, it's also necessary to add some external
+packages in Python3:
+
+```
+$ python:
+>>> import nltk
+>>> nltk.download('stopwords')
+>>> nltk.download('punkt')
+>>> nltk.download('averaged_perceptron_tagger')
+```
+
+Then in you notebook you must start the kernel within this environment, it's located at top right,
+by default you should Have Python [env:default], when the correct environment is selected
+you should have Python [env:solarobs]
 
 You can change the kernel in the menu Kernel > Change Kernel ...
 
 If the environment is not shown, try to reload the jupiterlab web page.
 
+
 ## Run the project
 
-All the implemented solutions can be found in the sources and run for the geocatalog webserver:
-Each file can be run cell by cell
+The project contains of 3 general approaches that turned out to be less efficient and a more specialized
+idea (number 4), that provided better insights.
+
+All the implemented solutions can be found in a different source file and they run over the geocatalog webserver:
+Each file can be run cell by cell.
 
 1. Supervised classification based on keywords
 
@@ -44,12 +64,15 @@ the labeled file
 K-means clustering is one of the basic and generic unsupervised classification algorithms of
 elements in a vectorial-space. Its objective is to group similar data points together (clusters), by
 following patterns. 
-The first step is to define a number k, which represents the number of clusters that will be formed. The center of each cluster is called
-centroid.
-The algorithm builds a corpus of the entries in the database and, using it and word2vec algorithm, it creates conenctions betweem words
-to compute similarities. Then, it identifies k centroids and allocates each data point to the nearest cluster.
-The algorithm starts with a first group of random centroids, then it performs repetitive calculations to optimize their positions. It stops whether the pre-set number of iterations has been reached or if there is no change in the positions of the centers.
-In case of natural language, processing , word2vec embeddings are used in order to determine the position of each word in the multidimensional space. 
+The first step is to define a number k, which represents the number of clusters that will be formed.
+The center of each cluster is called centroid.
+The algorithm builds a corpus of the entries in the database and, using it and word2vec algorithm,
+it creates connections betweem words to compute similarities. Then, it identifies k centroids and allocates
+each data point to the nearest cluster. The algorithm starts with a first group of random centroids, then it
+performs repetitive calculations to optimize their positions. It stops whether the pre-set number of iterations
+has been reached or if there is no change in the positions of the centers.
+In case of natural language, processing , word2vec embeddings are used in order to determine the position
+of each word in the multidimensional space. 
 
 - Main file that should be run:
 	K-Means Classification.ipynb
@@ -57,7 +80,9 @@ In case of natural language, processing , word2vec embeddings are used in order 
 
 3. Latent Semantic Analysis clustering
 
-One of the most common techniques for automatically obtaining topics is Latent semantic analysis (LSA). It  builds relationships between a set of documents and the terms they contain by producing a set of concepts related to the documents and terms. 
+One of the most common techniques for automatically obtaining topics is Latent semantic analysis (LSA).
+It builds relationships between a set of documents and the terms they contain by producing a set of concepts
+related to the documents and terms. 
 
 As input, it received a corpus of documents and returns a number of different topics from it, together with the most prominent words of each. 
 It uses bag of word(BoW) model, which results in a term-document matrix(occurrence of terms in a document). It builds a term frequency-inverse document frequency (tf-idf) where each position in the vector corresponds to a different word and a document is represented by the number of times each word appears. So, the most important words will be the ones that appear the most often in the documents. The LSA algorithms improve the process by also considering synonymy between words. It learns latent topics by performing a matrix decomposition on the document-term matrix using Singular value decomposition (SVD). This is a matrix factorization method that represents a matrix in the product of two matrices.
@@ -81,4 +106,4 @@ The approach in this case is the following:
 
 # Documentation
 
-More information can be found in the documentation from the *doc* folder
+More information can be found in the documentation from the *doc* folder and in the source files.
