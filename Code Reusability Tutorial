@@ -1,0 +1,13 @@
+Build up the solution for a new field
+
+The first step is to create a language model for the specific subject.
+The "Build Language Model" file contains an example of how to build a vocabulary for 
+solar observations, but in the same way it is possible to train a new language model for
+any subject. It connects to Zenodo to get as many papers as possible on the subject.
+
+It is necesary to build up a hierarchical onthology for any specific subject, that
+will be added in the "Predefined Labels" file. For a minimal number of changes in the source
+code, the hierarchy should follow the rules in the file: start from "themes" related words,
+then "domains" and "information"
+
+
