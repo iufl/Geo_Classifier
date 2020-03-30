@@ -10,4 +10,10 @@ will be added in the "Predefined Labels" file. For a minimal number of changes i
 code, the hierarchy should follow the rules in the file: start from "themes" related words,
 then "domains" and "information"
 
+The algorithm can be found in the 'Supervised Classifier' file. Firstly, the user needs to build
+up a database on the subject. In this case, we used Google Scholar API to get abstracts, as short
+texts on the subject and we keep them in files. For each entry, we saved the ids, the titles, the
+abstracts and the urls.
 
+We follow the steps of the algorithms, described in the documentation and we change only the name
+of the variables.

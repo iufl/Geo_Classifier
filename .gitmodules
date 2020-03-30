@@ -1,0 +1,6 @@
+[submodule "Biogenetic"]
+	path = Biogenetic
+	url = https://github.com/rwalk/gsdmm.git
+[submodule "gsdmm"]
+	path = gsdmm
+	url = https://github.com/rwalk/gsdmm.git
