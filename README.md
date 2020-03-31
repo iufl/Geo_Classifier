@@ -1,6 +1,22 @@
 # Geo Classifier
 # Results classification for solar observations database
 
+## Project Description
+
+The project aims to investigate the use of Machine Learning (ML) technique and more precisely
+Natural Language Processing (NLP) approach in order to provide a first step toward a better
+and more accurate knowledge of inner content of solar observations-based repositories going
+beyond current existing search techniques.
+
+The work is mapped to GEO Recommendation on Data Sharing Principles addressing the FAIR
+(Findable, Accessible, Interoperable, Reusable) principles that GEO is promoting.
+https://www.go-fair.org/fair-principles/.
+
+The Findable and Accessible are covered by Metadata and DOI pointing to the GitHub repository.
+The Reusable item is a new concept that was exemplified in the project. We build up an example
+of biogenetic, proving that the same algorithm can run in any context.
+
+
 ## Install the project
 
 To use this notebooks you will need to setup the notebook environment using a terminal and run:
